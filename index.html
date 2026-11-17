@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Avanija M.D. — ECE Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light dark;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#eef3f9; --surface:#ffffff; --ink:#14223a; --muted:#53627a;
+  --teal:#1f8f8a; --blue:#2563a8; --line:#d5deea; --hero:#14223a; --hero-ink:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1626; --surface:#17243a; --ink:#e8eef7; --muted:#9fb0c7;
+    --teal:#3cc2bc; --blue:#6aa5e8; --line:#2a3b57; --hero:#0a111e; --hero-ink:#ffffff;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e1626; --surface:#17243a; --ink:#e8eef7; --muted:#9fb0c7;
+  --teal:#3cc2bc; --blue:#6aa5e8; --line:#2a3b57; --hero:#0a111e; --hero-ink:#ffffff;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;line-height:1.6}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header.hero{background:var(--hero);color:var(--hero-ink);padding:56px 0 48px}
+.hero .wrap{display:flex;gap:32px;align-items:center;flex-wrap:wrap}
+.avatar{width:120px;height:120px;border-radius:50%;background:var(--teal);color:#0a111e;display:grid;place-items:center;font:700 44px "Fraunces",Georgia,serif;flex:none}
+.hero h1{font:700 clamp(2rem,6vw,3.2rem)/1.1 "Fraunces",Georgia,serif;margin:0 0 6px}
+.hero .tag{color:#5fd6d0;font-weight:600;margin:0 0 14px}
+.hero p{margin:0;max-width:52ch;color:#cdd8e8}
+.hero .ids{margin-top:14px;font-size:.95rem;color:#aebbd0}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--surface);border-bottom:1px solid var(--line);z-index:5}
+nav .wrap{display:flex;gap:4px;overflow-x:auto;padding-top:6px;padding-bottom:6px}
+nav a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:500;white-space:nowrap}
+nav a:hover{background:var(--bg);color:var(--ink)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--surface);z-index:10}
+section{padding:44px 0 8px}
+h2{font:700 1.7rem/1.2 "Fraunces",Georgia,serif;margin:0 0 6px}
+h2+.sub{color:var(--muted);margin:0 0 22px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--teal);border-radius:12px;padding:18px 20px}
+.card.b{border-left-color:var(--blue)}
+.card h3{margin:0 0 6px;font-size:1.05rem}
+.card p,.card ul{margin:0;color:var(--muted)}
+.card ul{padding-left:18px}
+.pill{display:inline-block;font-size:.8rem;font-weight:600;padding:2px 10px;border-radius:99px;background:var(--bg);border:1px solid var(--line);color:var(--ink);margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chips span{background:var(--surface);border:1px solid var(--line);border-radius:99px;padding:4px 12px;font-size:.92rem}
+.timeline{list-style:none;margin:0;padding:0;border-left:3px solid var(--teal);margin-left:8px}
+.timeline li{position:relative;padding:0 0 22px 24px}
+.timeline li::before{content:"";position:absolute;left:-10px;top:5px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--teal)}
+.timeline strong{display:block}
+.timeline span{color:var(--muted)}
+footer{margin-top:48px;padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.contact a{font-weight:600;word-break:break-all}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="avatar" aria-hidden="true">AM</div>
+    <div>
+      <h1>Avanija M.D.</h1>
+      <p class="tag">Building skills. Engineering solutions.</p>
+      <p>First-year ECE student and aspiring embedded systems engineer, building a foundation in electronics, programming and microcontroller-based design.</p>
+      <p class="ids">B.Tech Electronics &amp; Communication Engineering · Lovely Professional University · Reg. no. 12601599</p>
+    </div>
+  </div>
+</header>
+
+<nav aria-label="Sections"><div class="wrap">
+  <a href="#about">About</a><a href="#education">Education</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#achievements">Achievements</a><a href="#roadmap">Roadmap</a><a href="#contact">Contact</a>
+</div></nav>
+
+<main class="wrap">
+<section id="about">
+  <h2>About me</h2>
+  <p class="sub">First-Year ECE Student | Aspiring Embedded Systems Engineer</p>
+  <div class="grid">
+    <div class="card"><h3>Career statement</h3><p>I aim to build a strong foundation in electronics, programming and microcontroller-based design, and apply these skills to develop reliable real-world embedded solutions.</p></div>
+    <div class="card b"><h3>Career aspiration</h3><p>Secure a placement as an Embedded Systems Engineer by developing technical depth, hands-on project experience and industry readiness.</p></div>
+  </div>
+  <div class="chips" aria-label="Strengths to develop"><span>Problem-solving</span><span>Logical thinking</span><span>Curiosity about electronics</span><span>Willingness to learn</span><span>Practical project orientation</span></div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <p class="sub">B.Tech, Electronics &amp; Communication Engineering (ECE) · First year · Lovely Professional University, Punjab, India</p>
+  <div class="grid">
+    <div class="card"><h3>Studying now</h3><ul><li>Programming fundamentals and Python</li><li>Basic electrical and electronic circuits</li><li>Mathematics and engineering physics</li></ul></div>
+    <div class="card b"><h3>Coming next</h3><ul><li>Digital and analog electronics</li><li>Microprocessors and microcontrollers</li><li>Embedded C, communication protocols and embedded platforms</li></ul></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <p class="sub">Practical work, from simulation to planned builds.</p>
+  <div class="grid">
+    <div class="card"><span class="pill">Current · Simulation</span><h3>Vehicle Anti-Theft Alarm with Delayed Ignition Cut-Off</h3><p>Built in Tinkercad. Focus on alert logic, circuit design and simulation-based observation.</p></div>
+    <div class="card b"><span class="pill">Selected concept</span><h3>Water Monitoring System</h3><p>Calculating estimated electricity consumption and bill costs from appliance power ratings, usage hours and tariff rates.</p></div>
+    <div class="card"><span class="pill">Planned · Group project</span><h3>Smart Home Automation using IoT</h3><p>ESP32 with a mobile-app dashboard. Focus on appliance control, energy monitoring and remote observation.</p></div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <p class="sub">What I use today, and what I’m developing.</p>
+  <div class="grid">
+    <div class="card"><h3>Programming</h3><ul><li>Python fundamentals</li><li>Problem-solving and debugging</li><li>C programming (developing)</li></ul></div>
+    <div class="card b"><h3>Electronics</h3><ul><li>Circuit fundamentals</li><li>Digital logic concepts</li><li>Sensors and microcontroller interfacing</li></ul></div>
+    <div class="card"><h3>Tools &amp; platforms</h3><ul><li>Tinkercad simulation</li><li>Basic development workflows</li><li>Arduino / ESP32 (hands-on practice planned)</li></ul></div>
+  </div>
+  <p style="margin-top:16px;color:var(--muted)"><strong style="color:var(--ink)">Next milestones:</strong> strengthen C and Embedded C, practise sensor interfacing and microcontroller debugging, then explore communication protocols, Embedded Linux and real-time concepts.</p>
+</section>
+
+<section id="achievements">
+  <h2>Achievements &amp; activities</h2>
+  <p class="sub">Hackathon experience and learning goals.</p>
+  <div class="grid">
+    <div class="card"><span class="pill">GEAR UP Hackathon · LPU · September 2026</span><h3>IP-SAKTI Sahayak</h3><p>Team concept for a multilingual, source-cited AI assistant giving intellectual-property and regulatory guidance related to Ayurveda. My part: research and preparing the team’s presentation content. Skills shown: research, teamwork, understanding a problem statement and communicating a solution. Result: not selected for SIH.</p></div>
+    <div class="card b"><h3>Future learning</h3><ul><li>C programming</li><li>Embedded systems fundamentals</li><li>Arduino</li><li>Internet of Things (IoT)</li></ul></div>
+  </div>
+</section>
+
+<section id="roadmap">
+  <h2>Career roadmap</h2>
+  <p class="sub">Four years toward an embedded systems role.</p>
+  <ol class="timeline">
+    <li><strong>Year 1</strong><span>Build fundamentals in programming, electronics, mathematics and circuit simulation.</span></li>
+    <li><strong>Year 2</strong><span>Develop C/Embedded C, microcontroller interfacing and sensor-based mini-projects.</span></li>
+    <li><strong>Year 3</strong><span>Build advanced embedded projects, strengthen protocols, pursue internships and placement preparation.</span></li>
+    <li><strong>Year 4</strong><span>Complete capstone work, refine portfolio, practise technical interviews and target embedded systems roles.</span></li>
+  </ol>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Get in touch</h2>
+  <p class="sub">Open to connecting with faculty mentors, alumni and ECE professionals.</p>
+  <div class="grid">
+    <div class="card"><h3>Email</h3><p><a href="mailto:avanija292@gmail.com">avanija292@gmail.com</a></p></div>
+    <div class="card b"><h3>LinkedIn</h3><p><a href="https://www.linkedin.com/in/avanija-a828b7428" target="_blank" rel="noopener">linkedin.com/in/avanija-a828b7428</a></p></div>
+    <div class="card"><h3>Location</h3><p>Punjab, India</p></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 Avanija M.D. · B.Tech ECE, Lovely Professional University</div></footer>
+</body>
+</html>
